@@ -5,8 +5,132 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfЗадание15"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="1000" Width="900">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <DocumentViewer>
+            <FixedDocument>
+                <PageContent>
+                    <FixedPage>
+                        <FlowDocumentScrollViewer VerticalScrollBarVisibility="Auto">
+                            <FlowDocument>
+                                <Paragraph>
+                                    <Floater Width="250" HorizontalAlignment="Right">
+                                        <BlockUIContainer>
+                                            <Image Source="Data/1.jpg"/>
+                                        </BlockUIContainer> 
+                                    </Floater>
+                                    <Bold>Музей Лувр</Bold>
+                                    <Hyperlink NavigateUri="https://wikiway.com/france/parizh/luvr/">(Musée du Louvre)</Hyperlink>
+                                </Paragraph>
+                                <Paragraph>
+                                    Лувр – это одна из самых знаменитых достопримечательностей Парижа. 
+Лувр известен туристам, в первую очередь, не как великолепный архитектурный памятник, служивший некогда домом французским королям, а как известнейший музей мира, куда тянутся ценители искусства со всех уголков земного шара.
+                                </Paragraph>
+                                <Paragraph>
+                                    Что посмотреть.
+                    Музей делится на три крыла (Ришелье, Денон и Сюлли), которые включают в себя следующие отделы:
+                                </Paragraph>
+                                <List MarkerStyle="Box">
+                                    <ListItem>
+                                        <Paragraph>
+                                            1. египетских древностей;
+                                        </Paragraph>
+                                    </ListItem>
+                                    <ListItem>
+                                        <Paragraph>
+                                            2. ассирийских и финикийских древностей;
+                                        </Paragraph>
+                                    </ListItem>
+                                    <ListItem>
+                                        <Paragraph>
+                                            3. этрусских и греческих ваз (коллекция Кампаны) и погребальных урн;
+                                        </Paragraph>
+                                    </ListItem>
+                                    <ListItem>
+                                        <Paragraph>
+                                            4. античных мраморов;
+                                        </Paragraph>
+                                    </ListItem>
+                                    <ListItem>
+                                        <Paragraph>
+                                            5. скульптуры средн. веков и эпохи Возрождения;
+                                        </Paragraph>
+                                    </ListItem>
+                                    <ListItem>
+                                        <Paragraph>
+                                            6. новейшей скульптуры (работы Пюже, Куазево, Кусту, Гудона, Шоде, Рюда и т. д.);
+                                        </Paragraph>
+                                    </ListItem>
+                                    <ListItem>
+                                        <Paragraph>
+                                            7. живописи;
+                                        </Paragraph>
+                                    </ListItem>
+                                    <ListItem>
+                                        <Paragraph>
+                                            8. оригинальных рисунков знаменитых художников;
+                                        </Paragraph>
+                                    </ListItem>
+                                </List>
+                                <Paragraph>
+                                    <Bold>Шедевры Лувра</Bold>
+                                </Paragraph>
+                                <Table>
+                                    <Table.Columns>
+                                        <TableColumn Width="*"/>
+                                        <TableColumn Width="2*"/>
+                                    </Table.Columns>
+                                    <TableRowGroup>
+                                        <TableRow>
+                                            <TableCell>
+                                                <Paragraph>
+                                                    1.
+                                                    <Floater Width="250" HorizontalAlignment="Right">
+                                                        <BlockUIContainer>
+                                                            <Image Source="Data/2.jpg"/>
+                                                        </BlockUIContainer>
+                                                    </Floater>
+                                                </Paragraph>
+                                            </TableCell>
+                                            <TableCell>
+                                                <Paragraph>
+                                                    Визитной карточкой Лувра является знаменитая Джоконда или, как ее еще называют, Мона Лиза. Именно к этой картине ведут все указатели, которым послушно следуют потоки туристов. Мона Лиза закрыта толстым бронированным стеклом, а рядом с ней неизменно находятся два охранника и толпы поклонников. Когда-то Джоконда приезжала в Москву, но потом руководство музея приняло решение больше никуда не вывозить эту загадочную красавицу.
+                                                </Paragraph>
+                                            </TableCell>
+                                        </TableRow>
+                                        <TableRow>
+                                            <TableCell>
+                                                <Paragraph>
+                                                    2.
+                                                    <Floater Width="250" HorizontalAlignment="Right">
+                                                        <BlockUIContainer>
+                                                            <Image Source="Data/3.jpg"/>
+                                                        </BlockUIContainer>
+                                                    </Floater>
+                                                </Paragraph>
+                                            </TableCell>
+                                            <TableCell>
+                                                <Paragraph>
+                                                    Венера Милосская (Афродита) известна нисколько не меньше, чем предыдущая красавица. Автором Венеры считается скульптор Агесандр Антиохийский. У этой девушки непростая судьба. В 1820 году из-за нее завязался жаркий спор между турками и французами, в ходе которого статую богини бросили на землю и прекрасная скульптура разбилась. Французы собирали осколки впопыхах и… потеряли руки Венеры!
+                                                </Paragraph>
+                                            </TableCell>
+                                        </TableRow>
+                                    </TableRowGroup>
+                                </Table>
+                            </FlowDocument>
+                        </FlowDocumentScrollViewer>
+                    </FixedPage>
+                </PageContent>
+            </FixedDocument>
+        </DocumentViewer>
+        <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center">
+            <Button Content="Сохранить" Click="Button_Click"/>
+            <Button Content="Загрузить" Click="Button_Click1"/>
+        </StackPanel>
         
     </Grid>
 </Window>
